@@ -2,7 +2,7 @@
 using Markdig.Parsers;
 using Markdig.Syntax;
 
-namespace Markdig.Extensions.Admonition
+namespace Markdig.Extensions.Admonitions
 {
     public class Admonition : ContainerBlock, IFencedBlock
     {

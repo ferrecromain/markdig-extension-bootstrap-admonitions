@@ -1,9 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>markdig, extension, admonition,</PackageTags>
+    <NeutralLanguage>fr</NeutralLanguage>
+    <Version>0.1.0</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>FERREC Romain</Authors>
+    <Description>Unofficlal Markdig extension to use admonition components</Description>
+    <RepositoryUrl>https://github.com/ferrecromain/markdig-extension-admonitions</RepositoryUrl>
+    <Product>$(AssemblyName)</Product>
+    <PackageId>MarkdigExtensions.Admonitions</PackageId>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using Markdig;
+using Markdig.Extensions.Admonitions;
 using Markdig.Renderers;
 
 namespace Markdig.Extensions.Admonition
@@ -9,6 +10,26 @@ namespace Markdig.Extensions.Admonition
     /// <seealso cref="IMarkdownExtension" />
     public class AdmonitionExtension : IMarkdownExtension
     {
+        private IEnumerable<AdmonitionTemplate> _admonitionTemplates;
+        public AdmonitionExtension(
+            string warningTitle, 
+            string dangerTitle, 
+            string tipTitle,
+            string noteTitle)
+        {
+            _admonitionTemplates = new List<AdmonitionTemplate>()
+            {
+                new AdmonitionTemplate("tip", "success", "lightbuld", tipTitle),
+                new AdmonitionTemplate("note", "info", "info-circle-fill", noteTitle),
+                new AdmonitionTemplate("danger", "danger", "x-circle-fill", dangerTitle),
+                new AdmonitionTemplate("warning", "warning", "exclamation-triangle-fill", warningTitle),
+            };
+        }
+
+        public AdmonitionExtension(IEnumerable<AdmonitionTemplate> admonitionsTemplates)
+        {
+            _admonitionTemplates = admonitionsTemplates;
+        }
         public void Setup(MarkdownPipelineBuilder pipeline)
         {
             if (!pipeline.BlockParsers.Contains<AdmonitionParser>())
@@ -25,7 +46,7 @@ namespace Markdig.Extensions.Admonition
                 if (!htmlRenderer.ObjectRenderers.Contains<HtmlAdmonitionRenderer>())
                 {
                     // Must be inserted before CodeBlockRenderer
-                    htmlRenderer.ObjectRenderers.Insert(0, new HtmlAdmonitionRenderer());
+                    htmlRenderer.ObjectRenderers.Insert(0, new HtmlAdmonitionRenderer(_admonitionTemplates));
                 }
             }
         }

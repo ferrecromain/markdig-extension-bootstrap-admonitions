@@ -1,6 +1,6 @@
 ﻿using Markdig.Parsers;
 
-namespace Markdig.Extensions.Admonition
+namespace Markdig.Extensions.Admonitions
 {
     /// <summary>
     /// The block parser for a <see cref="Admonition"/>.
