@@ -2,12 +2,12 @@
 using Markdig.Renderers.Html;
 using System.Resources;
 
-namespace Markdig.Extensions.Admonitions
+namespace Markdig.Extensions.Bootstrap.Admonitions
 {
-    public class HtmlAdmonitionRenderer : HtmlObjectRenderer<Admonition>
+    public class HtmlBootstrapAdmonitionRenderer : HtmlObjectRenderer<Admonition>
     {
-        private IEnumerable<AdmonitionTemplate> _admonitionTemplates;
-        public HtmlAdmonitionRenderer(IEnumerable<AdmonitionTemplate> admonitionTemplates)
+        private IEnumerable<BootstrapAdmonitionTemplate> _admonitionTemplates;
+        public HtmlBootstrapAdmonitionRenderer(IEnumerable<BootstrapAdmonitionTemplate> admonitionTemplates)
         {
             _admonitionTemplates = admonitionTemplates;
         }
@@ -24,9 +24,9 @@ namespace Markdig.Extensions.Admonitions
                     {
                         string admonitionType = classes.Single().ToLower();
 
-                        AdmonitionTemplate? admonitionTemplate = _admonitionTemplates.SingleOrDefault(p => p.Type.ToLower().Equals(admonitionType));
+                        BootstrapAdmonitionTemplate? admonitionTemplate = _admonitionTemplates.SingleOrDefault(p => p.Type.ToLower().Equals(admonitionType));
 
-                        if(admonitionTemplate != null)
+                        if (admonitionTemplate != null)
                         {
                             renderer.Write($"<div class=\"alert alert-{admonitionTemplate.BsAlertType}\" role=\"alert\">");
                             renderer.Write($"<p class=\"alert-heading\"><i class=\"bi bi-{admonitionTemplate.BsIconType}\"></i><strong> {admonitionTemplate.BsAlertHeading}</strong></p>");

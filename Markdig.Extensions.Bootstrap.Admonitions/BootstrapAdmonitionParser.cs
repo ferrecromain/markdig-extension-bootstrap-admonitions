@@ -1,17 +1,17 @@
 ﻿using Markdig.Parsers;
 
-namespace Markdig.Extensions.Admonitions
+namespace Markdig.Extensions.Bootstrap.Admonitions
 {
     /// <summary>
     /// The block parser for a <see cref="Admonition"/>.
     /// </summary>
     /// <seealso cref="FencedBlockParserBase{CustomContainer}" />
-    public class AdmonitionParser : FencedBlockParserBase<Admonition>
+    public class BootstrapAdmonitionParser : FencedBlockParserBase<Admonition>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AdmonitionParser"/> class.
+        /// Initializes a new instance of the <see cref="BootstrapAdmonitionParser"/> class.
         /// </summary>
-        public AdmonitionParser()
+        public BootstrapAdmonitionParser()
         {
             OpeningCharacters = new[] { ':' };
 
