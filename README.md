@@ -2,7 +2,7 @@
 
 This is an extension for Markdig to add admonitions (also known as **call-outs**).
 
-![Admonition samples](.github/images/admonition-samples.png)
+![Admonition samples](https://raw.githubusercontent.com/ferrecromain/markdig-extension-bootstrap-admonitions/master/.github/images/admonition-samples.png)
 
 
 ## Initialization
