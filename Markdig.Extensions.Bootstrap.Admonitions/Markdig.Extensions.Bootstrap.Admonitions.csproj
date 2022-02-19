@@ -7,13 +7,13 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>markdig, extension, admonition,</PackageTags>
     <NeutralLanguage>fr</NeutralLanguage>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>FERREC Romain</Authors>
-    <Description>Unofficlal Markdig extension to use admonition components</Description>
-    <RepositoryUrl>https://github.com/ferrecromain/markdig-extension-admonitions</RepositoryUrl>
+    <Description>Unofficial Markdig extension to use admonitions</Description>
+    <RepositoryUrl>https://github.com/ferrecromain/markdig-extension-bootstrap-admonitions</RepositoryUrl>
     <Product>$(AssemblyName)</Product>
-    <PackageId>MarkdigExtensions.Admonitions</PackageId>
+    <PackageId>MarkdigExtensions.Bootstrap.Admonitions</PackageId>
     <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
