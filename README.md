@@ -7,7 +7,7 @@ This is an extension for Markdig to add admonitions (also known as **call-outs**
 
 ## Initialization
 
-You can instanciate ```BootstrapAdmonitionExtension``` in two ways.
+We can instanciate ```BootstrapAdmonitionExtension``` in two ways.
 
 The first, and the simplest way: 
 ```csharp
@@ -33,7 +33,7 @@ To instanciate ```BootstrapAdmonitionTemplate```, we have to provide 4 aguments:
 
 ## How to use
 
-In your markdown document we will use the following syntax specifying the key name of the admonition we want to use (case insensitive). : 
+In our markdown document we will use the following syntax specifying the key name of the admonition we want to use (case insensitive). : 
 
 ```markdown
 ::: warning
