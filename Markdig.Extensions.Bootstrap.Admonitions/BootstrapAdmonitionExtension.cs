@@ -17,7 +17,7 @@ namespace Markdig.Extensions.Bootstrap.Admonitions
         {
             _admonitionTemplates = new List<BootstrapAdmonitionTemplate>()
             {
-                new BootstrapAdmonitionTemplate("tip", "success", "lightbuld", tipTitle),
+                new BootstrapAdmonitionTemplate("tip", "success", "lightbulb", tipTitle),
                 new BootstrapAdmonitionTemplate("note", "info", "info-circle-fill", noteTitle),
                 new BootstrapAdmonitionTemplate("danger", "danger", "x-circle-fill", dangerTitle),
                 new BootstrapAdmonitionTemplate("warning", "warning", "exclamation-triangle-fill", warningTitle),
